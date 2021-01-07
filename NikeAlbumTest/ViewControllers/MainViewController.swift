@@ -47,7 +47,11 @@ class MainViewController: UIViewController {
             }
             else
             {
-                
+                let alert = UIAlertController(title: "Cannot access server", message: "Please check your network connection and try again", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+                self?.present(alert, animated: true)
             }
             
             self?.activityIndicator?.stopAnimating()
@@ -93,6 +97,8 @@ extension MainViewController: UITableViewDataSource
         }
         
         cell?.textLabel?.text = viewModel?.getName(index: indexPath.row)
+        
+        cell?.detailTextLabel?.text = viewModel?.getArtist(index: indexPath.row)
             
         cell?.imageView?.image = UIImage(named: "musicholder")
         
