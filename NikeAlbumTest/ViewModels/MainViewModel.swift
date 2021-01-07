@@ -7,11 +7,17 @@
 
 import UIKit
 
+enum NetworkStatus {
+    case success
+    case failed
+    case idle
+}
+
 class MainViewModel: NSObject {
     
     var album: MusicAlbum?
     
-    var isDataReady = ValueBox(false)
+    var isDataReady = ValueBox(NetworkStatus.idle)
     
     func getAlbumCount() -> Int
     {
@@ -43,7 +49,12 @@ class MainViewModel: NSObject {
             
             if flag {
                 self.album = data
-                self.isDataReady.value = true
+                self.isDataReady.value = .success
+            }
+            else
+            {
+                self.album = nil
+                self.isDataReady.value = .failed
             }
             
         })
@@ -52,8 +63,13 @@ class MainViewModel: NSObject {
     func loadRemoteData(){
         RemoteRepository.fetchData(urlStr: Configuration.service_uuid_str, completion: { data,flag in
             if flag {
-            self.album = data
-            self.isDataReady.value = true
+                self.album = data
+                self.isDataReady.value = .success
+            }
+            else
+            {
+                self.album = nil
+                self.isDataReady.value = .failed
             }
         })
     }

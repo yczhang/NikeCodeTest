@@ -41,17 +41,18 @@ class MainViewController: UIViewController {
         
         viewModel?.isDataReady.bind(listener: {[weak self] isDataReady in
             
-            if isDataReady {
-                
-                self?.contentView?.reloadData()
-            }
-            else
+            switch isDataReady
             {
+            case .success:
+                self?.contentView?.reloadData()
+            case .failed:
                 let alert = UIAlertController(title: "Cannot access server", message: "Please check your network connection and try again", preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
                 self?.present(alert, animated: true)
+            case .idle:
+                break
             }
             
             self?.activityIndicator?.stopAnimating()
@@ -93,7 +94,7 @@ extension MainViewController: UITableViewDataSource
         var cell = contentView?.dequeueReusableCell(withIdentifier: "MainTableViewCell")
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "MainTableViewCell")
+            cell = MainTableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "MainTableViewCell")
         }
         
         cell?.textLabel?.text = viewModel?.getName(index: indexPath.row)

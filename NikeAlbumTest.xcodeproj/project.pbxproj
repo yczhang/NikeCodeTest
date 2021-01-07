@@ -25,6 +25,7 @@
 		0ED2AEF625A6990C0034614F /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AEF525A6990C0034614F /* ImageHelper.swift */; };
 		0ED2AEFB25A69B390034614F /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AEFA25A69B390034614F /* ValueBox.swift */; };
 		0ED2AF0325A7844B0034614F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AF0225A7844B0034614F /* Configuration.swift */; };
+		0ED2AF0C25A78DF50034614F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AF0B25A78DF50034614F /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0ED2AEF525A6990C0034614F /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		0ED2AEFA25A69B390034614F /* ValueBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBox.swift; sourceTree = "<group>"; };
 		0ED2AF0225A7844B0034614F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		0ED2AF0B25A78DF50034614F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		0ED2AE6325A67DA30034614F /* NikeAlbumTest */ = {
 			isa = PBXGroup;
 			children = (
+				0ED2AF0A25A78DD60034614F /* Views */,
 				0ED2AEF125A695D50034614F /* Helper */,
 				0ED2AEE325A693F50034614F /* Logging */,
 				0ED2AEE225A693090034614F /* Resources */,
@@ -212,6 +215,14 @@
 				0ED2AF0225A7844B0034614F /* Configuration.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		0ED2AF0A25A78DD60034614F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2AF0B25A78DF50034614F /* MainTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				0ED2AF0325A7844B0034614F /* Configuration.swift in Sources */,
 				0ED2AE9825A67DDA0034614F /* MainViewController.swift in Sources */,
 				0ED2AED225A687F90034614F /* LocalDataSource.swift in Sources */,
+				0ED2AF0C25A78DF50034614F /* MainTableViewCell.swift in Sources */,
 				0ED2AEA725A6826F0034614F /* MainViewModel.swift in Sources */,
 				0ED2AEF625A6990C0034614F /* ImageHelper.swift in Sources */,
 				0ED2AEFB25A69B390034614F /* ValueBox.swift in Sources */,
@@ -527,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5X7DTUD94;
 				INFOPLIST_FILE = NikeAlbumTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5X7DTUD94;
 				INFOPLIST_FILE = NikeAlbumTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
