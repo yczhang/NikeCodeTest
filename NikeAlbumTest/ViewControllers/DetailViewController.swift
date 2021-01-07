@@ -55,7 +55,7 @@ class DetailViewController: UIViewController {
         label_name.translatesAutoresizingMaskIntoConstraints = false
         let label_name_Contrains = [
             label_name.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            label_name.topAnchor.constraint(equalTo: imageView_icon.bottomAnchor, constant: 20),
+            label_name.topAnchor.constraint(equalTo: imageView_icon.bottomAnchor, constant: 10),
         ]
 
         NSLayoutConstraint.activate(label_name_Contrains)
@@ -71,7 +71,7 @@ class DetailViewController: UIViewController {
         label_artistname.translatesAutoresizingMaskIntoConstraints = false
         let label_artistname_Contrains = [
             label_artistname.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            label_artistname.topAnchor.constraint(equalTo: label_name.bottomAnchor, constant: 20),
+            label_artistname.topAnchor.constraint(equalTo: label_name.bottomAnchor, constant: 10),
         ]
 
         NSLayoutConstraint.activate(label_artistname_Contrains)

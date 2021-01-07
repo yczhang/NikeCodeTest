@@ -103,6 +103,8 @@ extension MainViewController: UITableViewDataSource
             cell = MainTableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "MainTableViewCell")
         }
         
+        cell?.selectionStyle = .none
+        
         cell?.textLabel?.text = viewModel?.getName(index: indexPath.row)
         
         cell?.detailTextLabel?.text = viewModel?.getArtist(index: indexPath.row)
