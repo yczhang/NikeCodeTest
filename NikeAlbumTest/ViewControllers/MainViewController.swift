@@ -26,8 +26,7 @@ class MainViewController: UIViewController {
         
         self.view.backgroundColor = .darkGray
         
-        self.title = "Nike Music Album"
-        
+        self.title = Configuration.main_title
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:.refresh, target: self, action: #selector(action_refresh))
         
         let activityIndicator = UIActivityIndicatorView(style: .large)
