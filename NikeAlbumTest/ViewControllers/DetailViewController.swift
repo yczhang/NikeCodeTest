@@ -85,8 +85,6 @@ class DetailViewController: UIViewController {
         self.view.addSubview(button_action)
         
         button_action.translatesAutoresizingMaskIntoConstraints = false
-        
-        button_action.translatesAutoresizingMaskIntoConstraints = false
         let button_action_Contrains = [
             NSLayoutConstraint(item: button_action,
                                attribute: .leading,

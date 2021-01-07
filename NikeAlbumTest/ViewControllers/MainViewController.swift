@@ -58,16 +58,22 @@ class MainViewController: UIViewController {
             self?.activityIndicator?.stopAnimating()
         })
         
-        contentView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
+        let contentView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
+        self.view.addSubview(contentView)
+        contentView.dataSource = self
+        contentView.delegate = self
         
-        if let subview = contentView {
-            
-            self.view.addSubview(subview)
-            
-        }
-                
-        contentView?.dataSource = self
-        contentView?.delegate = self
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        let contentView_Contrains = [
+            contentView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+       ]
+        
+        NSLayoutConstraint.activate(contentView_Contrains)
+        
+        self.contentView = contentView
         
 //        viewModel?.loadLocalData()
         
