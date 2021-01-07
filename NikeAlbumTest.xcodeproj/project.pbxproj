@@ -24,6 +24,7 @@
 		0ED2AEED25A695730034614F /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED2AEEC25A695730034614F /* demo.json */; };
 		0ED2AEF625A6990C0034614F /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AEF525A6990C0034614F /* ImageHelper.swift */; };
 		0ED2AEFB25A69B390034614F /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AEFA25A69B390034614F /* ValueBox.swift */; };
+		0ED2AF0325A7844B0034614F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2AF0225A7844B0034614F /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0ED2AEEC25A695730034614F /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		0ED2AEF525A6990C0034614F /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		0ED2AEFA25A69B390034614F /* ValueBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBox.swift; sourceTree = "<group>"; };
+		0ED2AF0225A7844B0034614F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,6 @@
 				0ED2AED625A688030034614F /* Repositories */,
 				0ED2AEC825A686430034614F /* ViewControllers */,
 				0ED2AEB725A6835D0034614F /* Models */,
-				0ED2AEAE25A682820034614F /* Views */,
 				0ED2AEA525A682500034614F /* ViewModels */,
 				0ED2AE6425A67DA30034614F /* AppDelegate.swift */,
 				0ED2AE6625A67DA30034614F /* SceneDelegate.swift */,
@@ -159,13 +160,6 @@
 				0ED2AECC25A687C50034614F /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		0ED2AEAE25A682820034614F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		0ED2AEB725A6835D0034614F /* Models */ = {
@@ -215,6 +209,7 @@
 			children = (
 				0ED2AEFA25A69B390034614F /* ValueBox.swift */,
 				0ED2AEF525A6990C0034614F /* ImageHelper.swift */,
+				0ED2AF0225A7844B0034614F /* Configuration.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -356,6 +351,7 @@
 				0ED2AEB925A683770034614F /* MusicAlbum.swift in Sources */,
 				0ED2AED825A688260034614F /* RemoteDataSource.swift in Sources */,
 				0ED2AEC425A686390034614F /* DetailViewController.swift in Sources */,
+				0ED2AF0325A7844B0034614F /* Configuration.swift in Sources */,
 				0ED2AE9825A67DDA0034614F /* MainViewController.swift in Sources */,
 				0ED2AED225A687F90034614F /* LocalDataSource.swift in Sources */,
 				0ED2AEA725A6826F0034614F /* MainViewModel.swift in Sources */,

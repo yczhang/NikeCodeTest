@@ -77,6 +77,7 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint.activate(label_artistname_Contrains)
         
         let button_action = UIButton(type: .custom)
+        button_action.backgroundColor = .white
         button_action.setTitle("Go to iTunes", for: .normal)
         button_action.setTitleColor(.red, for: .normal)
         button_action.sizeToFit()
@@ -87,7 +88,20 @@ class DetailViewController: UIViewController {
         
         button_action.translatesAutoresizingMaskIntoConstraints = false
         let button_action_Contrains = [
-            button_action.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            NSLayoutConstraint(item: button_action,
+                               attribute: .leading,
+                                                      relatedBy: .equal,
+                                                      toItem: self.view,
+                                                      attribute: .leading,
+                                                      multiplier: 1.0,
+                                                      constant: 20.0),
+            NSLayoutConstraint(item: button_action,
+                               attribute: .trailing,
+                                                      relatedBy: .equal,
+                                                      toItem: self.view,
+                                                      attribute: .trailing,
+                                                      multiplier: 1.0,
+                                                      constant: -20.0),
             button_action.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20),
         ]
         NSLayoutConstraint.activate(button_action_Contrains)

@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     
     private var viewModel: MainViewModel?
     
-
+    private var activityIndicator: UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,29 @@ class MainViewController: UIViewController {
         
         self.title = "Nike Music Album"
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:.refresh, target: self, action: #selector(action_refresh))
+        
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.hidesWhenStopped = true
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: activityIndicator)
+        activityIndicator.startAnimating()
+        
+        self.activityIndicator = activityIndicator
+        
         viewModel = MainViewModel()
         
         viewModel?.isDataReady.bind(listener: {[weak self] isDataReady in
             
-            self?.contentView?.reloadData()
+            if isDataReady {
+                
+                self?.contentView?.reloadData()
+            }
+            else
+            {
+                
+            }
+            
+            self?.activityIndicator?.stopAnimating()
         })
         
         contentView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
@@ -46,7 +64,16 @@ class MainViewController: UIViewController {
         contentView?.dataSource = self
         contentView?.delegate = self
         
-        viewModel?.loadLocatData()
+//        viewModel?.loadLocalData()
+        
+        viewModel?.loadRemoteData()
+    }
+    
+    @objc func action_refresh()
+    {
+        viewModel?.loadRemoteData()
+        
+        self.activityIndicator?.startAnimating()
     }
 
 }
