@@ -30,4 +30,29 @@ class DetailViewModel : NSObject
     {
         return item?.url
     }
+    
+    func getReleaseDate()->String?
+    {
+        return item?.releaseDate
+    }
+    
+    func getCopyRight()->String?
+    {
+        return item?.copyright
+    }
+    
+    func getGenres()->String?
+    {
+        var str = ""
+        if let genres = item?.genres {
+            
+            for genre in genres
+            {
+                if str.count > 0 {str.append(",")}
+                str.append(genre.name ?? "")
+            }
+            
+        }
+        return str
+    }
 }

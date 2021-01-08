@@ -23,12 +23,23 @@ struct MusicItem: Codable
     let artistName: String?
     let iconurl: String?
     let url: String?
+    let copyright: String?
+    let releaseDate: String?
+    let genres: [MusicGenre]?
     
     enum CodingKeys:String , CodingKey {
         case name
         case artistName
         case iconurl = "artworkUrl100"
         case url
+        case copyright
+        case releaseDate
+        case genres
     }
+}
+
+struct MusicGenre: Codable
+{
+    let name: String?
 }
 
