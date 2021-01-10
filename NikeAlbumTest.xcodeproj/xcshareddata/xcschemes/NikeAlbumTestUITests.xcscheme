@@ -16,7 +16,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ED2AE8125A67DA60034614F"
+               BlueprintIdentifier = "0ED2AF7725AB6F3C0034614F"
                BuildableName = "NikeAlbumTestUITests.xctest"
                BlueprintName = "NikeAlbumTestUITests"
                ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
@@ -29,6 +29,26 @@
                BlueprintIdentifier = "0ED2AE7625A67DA60034614F"
                BuildableName = "NikeAlbumTestTests.xctest"
                BlueprintName = "NikeAlbumTestTests"
+               ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0ED2AF5E25AB6E2F0034614F"
+               BuildableName = "NikeAlbumTestUnitTest.xctest"
+               BlueprintName = "NikeAlbumTestUnitTest"
+               ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0ED2AF8825AB6F610034614F"
+               BuildableName = "NikeAlbumTestUITest.xctest"
+               BlueprintName = "NikeAlbumTestUITest"
                ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
             </BuildableReference>
          </TestableReference>

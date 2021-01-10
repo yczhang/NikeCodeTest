@@ -168,7 +168,7 @@ class DetailViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(button_action_Contrains)
         
-        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight  {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
              applyLandscapeLayout()
         } else {
              applyPortrainLayout()
@@ -182,18 +182,24 @@ class DetailViewController: UIViewController {
              applyPortrainLayout()
         }
     }*/
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size: CGSize, with coordinator:    UIViewControllerTransitionCoordinator) {
         
         coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
 
-            if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-                self.applyLandscapeLayout()
-                
-            } else {
+            let orient = UIApplication.shared.statusBarOrientation
+            switch orient {
+            case .portrait:
+                print("Portrait")
                 self.applyPortrainLayout()
+                break
+                // Do something
+            default:
+                print("LandScape")
+                // Do something else
+                self.applyLandscapeLayout()
+                break
             }
-            
-        }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
                 print("rotation completed")
         })
         
