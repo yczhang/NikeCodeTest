@@ -74,14 +74,14 @@ class MainViewController: UIViewController {
         
         self.contentView = contentView
         
-//        viewModel?.loadLocalData()
+//        viewModel?.loadLocalData(filePath: "demo")
         
-        viewModel?.loadRemoteData()
+        viewModel?.loadRemoteData(urlStr: Configuration.service_uuid_str)
     }
     
     @objc func action_refresh()
     {
-        viewModel?.loadRemoteData()
+        viewModel?.loadRemoteData(urlStr: Configuration.service_uuid_str)
         
         self.activityIndicator?.startAnimating()
     }

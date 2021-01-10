@@ -44,8 +44,8 @@ class MainViewModel: NSObject {
         return album?.feed?.results?[index]
     }
     
-    func loadLocalData(){
-        LocalRepository.fetchData(path: "demo", completion: { data,flag in
+    func loadLocalData(filePath:String){
+        LocalRepository.fetchData(path: filePath, completion: { data,flag in
             
             if flag {
                 self.album = data
@@ -60,8 +60,8 @@ class MainViewModel: NSObject {
         })
     }
     
-    func loadRemoteData(){
-        RemoteRepository.fetchData(urlStr: Configuration.service_uuid_str, completion: { data,flag in
+    func loadRemoteData(urlStr : String){
+        RemoteRepository.fetchData(urlStr: urlStr, completion: { data,flag in
             if flag {
                 self.album = data
                 self.isDataReady.value = .success
