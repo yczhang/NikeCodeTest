@@ -26,28 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ED2AE7625A67DA60034614F"
-               BuildableName = "NikeAlbumTestTests.xctest"
-               BlueprintName = "NikeAlbumTestTests"
-               ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ED2AF7725AB6F3C0034614F"
-               BuildableName = "NikeAlbumTestUITests.xctest"
-               BlueprintName = "NikeAlbumTestUITests"
-               ReferencedContainer = "container:NikeAlbumTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference

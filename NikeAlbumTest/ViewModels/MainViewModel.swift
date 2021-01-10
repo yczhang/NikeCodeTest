@@ -26,21 +26,25 @@ class MainViewModel: NSObject {
 
     func getName(index:Int)->String?
     {
+        if index >= album?.feed?.results?.count ?? 0 {return nil}
         return album?.feed?.results?[index].name
     }
     
     func getArtist(index: Int)->String?
     {
+        if index >= album?.feed?.results?.count ?? 0 {return nil}
         return album?.feed?.results?[index].artistName
     }
     
     func getIconUrl(index :Int) -> String?
     {
+        if index >= album?.feed?.results?.count ?? 0 {return nil}
         return album?.feed?.results?[index].iconurl
     }
     
     func getItem(index : Int) -> MusicItem?
     {
+        if index >= album?.feed?.results?.count ?? 0 {return nil}
         return album?.feed?.results?[index]
     }
     

@@ -41,11 +41,23 @@ class NikeAlbumTestUnitTest: XCTestCase {
         XCTAssertEqual(sut_detail.getName(),"The Voice", "Error: Name Mismatch")
         XCTAssertEqual(sut_detail.getArtist(), "Lil Durk", "Error: Artist Mismatch")
         XCTAssertEqual(sut_detail.getReleaseDate(), "2020-12-24", "Error: Artist Mismatch")
+        XCTAssert(sut_detail.getGenres() != nil)
+        XCTAssert(sut_detail.getIconUrl() != nil)
+        XCTAssert(sut_detail.getCopyRight() != nil)
+        XCTAssert(sut_detail.getITuneUrl() != nil)
     }
     
     func testMainViewMode() throws
     {
         XCTAssertEqual(sut_main.getAlbumCount(),10,"Album Count mismatch")
+        
+        XCTAssert(sut_main.getItem(index: 5) != nil)
+        XCTAssert(sut_main.getItem(index: 10) == nil)
+        
+        XCTAssert(sut_main.getName(index: 6) != nil)
+        XCTAssert(sut_main.getArtist(index: 6) != nil)
+        XCTAssert(sut_main.getIconUrl(index: 6) != nil)
+        XCTAssert(sut_main.getIconUrl(index: 10) == nil)
     }
 
     func testPerformanceExample() throws {
