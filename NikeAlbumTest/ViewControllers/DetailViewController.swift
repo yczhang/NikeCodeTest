@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DetailViewPresenter {
+    func onViewLoaded()
+}
+
 class DetailViewController: UIViewController {
     
     var imageView_icon : UIImageView?
@@ -21,10 +25,12 @@ class DetailViewController: UIViewController {
     
     var viewModel : DetailViewModel?
     
+    var presenter : DetailViewPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        presenter?.onViewLoaded()
         
         setupUI()
     }

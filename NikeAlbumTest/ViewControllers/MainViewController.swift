@@ -7,16 +7,24 @@
 
 import UIKit
 
+protocol MainViewPresenter {
+    func onViewLoaded()
+}
+
 class MainViewController: UIViewController {
     
-    private var contentView : UITableView?
+    var contentView : UITableView?
     
-    private var viewModel: MainViewModel?
+    var viewModel: MainViewModel?
     
     private var activityIndicator: UIActivityIndicatorView?
+    
+    var presenter: MainViewPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter?.onViewLoaded()
         
         setupUI()
     }
@@ -74,9 +82,13 @@ class MainViewController: UIViewController {
         
         self.contentView = contentView
         
-//        viewModel?.loadLocalData(filePath: "demo")
-        
         viewModel?.loadRemoteData(urlStr: Configuration.service_uuid_str)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     @objc func action_refresh()

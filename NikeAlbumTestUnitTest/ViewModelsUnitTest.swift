@@ -9,7 +9,7 @@ import XCTest
 
 @testable import NikeAlbumTest
 
-class NikeAlbumTestUnitTest: XCTestCase {
+class ViewModelsUnitTest: XCTestCase {
     
     var sut_detail : DetailViewModel!
     var sut_main : MainViewModel!
@@ -60,6 +60,14 @@ class NikeAlbumTestUnitTest: XCTestCase {
         XCTAssert(sut_main.getIconUrl(index: 10) == nil)
     }
 
+    func testMainViewController() throws
+    {
+    }
+    
+    func testDetailViewController() throws
+    {
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
